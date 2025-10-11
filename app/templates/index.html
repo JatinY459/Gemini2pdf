@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Chat to PDF</title>
+    <!-- Link to Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl mx-auto p-8 bg-white rounded-xl shadow-lg">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800">
+          Gemini Chat to PDF
+        </h1>
+        <p class="mt-2 text-gray-600">
+          Instantly convert any public Gemini share link into a high-fidelity
+          PDF.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label for="gemini-url" class="sr-only">Gemini Share URL</label>
+          <input
+            type="url"
+            id="gemini-url"
+            placeholder="Paste your Gemini share link here (e.g., https://g.co/gemini/share/...)"
+            class="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-shadow"
+          />
+        </div>
+
+        <div>
+          <button
+            id="convert-btn"
+            class="w-full px-4 py-4 text-lg font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300 transition-transform transform hover:scale-105"
+          >
+            <span id="btn-text">Convert to PDF</span>
+            <span id="btn-loader" class="hidden">
+              <svg
+                class="animate-spin h-5 w-5 text-white inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Processing...
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Area for status messages and errors -->
+      <div
+        id="message-area"
+        class="mt-6 text-center text-red-600 font-medium h-6"
+      ></div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
