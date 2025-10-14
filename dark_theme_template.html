@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gemini Chat Export (Improved Dark Theme)</title>
+    <style>
+      /* A modern, refined dark theme color palette */
+      @page {
+        size: A4;
+        margin: 1cm;
+        background-color: #0d1117;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        line-height: 1.6;
+        background-color: #0d1117; /* Deep charcoal background */
+        color: #c9d1d9; /* Soft, light gray text */
+      }
+
+      h1 {
+        text-align: center;
+        color: #58a6ff; /* Bright, clear blue for heading */
+        border-bottom: 2px solid #30363d; /* Muted gray border */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+
+      .user-prompt {
+        background-color: #1c2128; /* Slightly lighter gray for user prompt */
+        border-left: 5px solid #3fb950; /* A vibrant green for accent */
+        padding: 15px 20px;
+        margin-bottom: 0.75rem;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .model-response {
+        background-color: #161b22; /* Darker gray for model response */
+        padding: 15px 20px;
+        margin-bottom: 0.75rem;
+        border-radius: 8px;
+        word-wrap: break-word;
+        page-break-inside: avoid;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      p.role {
+        font-weight: bold;
+        color: #8b949e; /* Muted gray for the role text (You/Gemini) */
+        margin: 0 0 8px 0;
+      }
+
+      .source-link a {
+        color: #58a6ff; /* Same bright blue as the heading for links */
+        text-decoration: none;
+      }
+      .source-link a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #30363d; /* Consistent muted gray for horizontal rule */
+        margin-bottom: 25px;
+      }
+
+      b,
+      strong {
+        color: #adbac7; /* Slightly brighter text for bolded elements */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gemini Chat Export</h1>
+    <p class="source-link">
+      <strong>Source:</strong>
+      <a href="https://g.co/gemini/share/781586fab8b2"
+        >https://g.co/gemini/share/781586fab8b2</a
+      >
+    </p>
+    <hr />
+    <div class="user-prompt">
+      <p class="role">You</p>
+      <div>write in short: 2 points on pokemon in numbered lists</div>
+    </div>
+    <div class="model-response">
+      <p class="role">Gemini</p>
+      <div>
+        <p>Here are two points about Pokémon:</p>
+        <ol>
+          <li>
+            <b>Core Concept:</b> The franchise centers on fictional creatures
+            called "Pokémon," which humans, known as Pokémon Trainers, catch and
+            train to battle each other for sport. The goal for many trainers is
+            to become a Pokémon Master by defeating other trainers and
+            collecting all available Pokémon.
+          </li>
+          <li>
+            <b>Multimedia Phenomenon:</b> Originating as a pair of video games
+            for the Game Boy, Pokémon has expanded into one of the
+            highest-grossing media franchises in the world, including a popular
+            animated TV series, movies, a trading card game, manga, toys, and
+            other merchandise.
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

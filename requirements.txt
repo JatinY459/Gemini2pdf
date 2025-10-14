@@ -1,6 +1,6 @@
 Flask
 requests
 beautifulsoup4
-xhtml2pdf
+pdfkit
 selenium
 webdriver-manager
